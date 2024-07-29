@@ -1,10 +1,11 @@
-import Login from "~/components/Login";
+import { PocketProvider } from "~/context/PocketBase";
+import { RequireAuth } from "~/components/RequireAuth";
 
 function App() {
   return (
-    <main className="flex justify-center items-center h-screen dark:bg-black">
-      <Login />
-    </main>
+    <PocketProvider>
+      <RequireAuth />
+    </PocketProvider>
   );
 }
 
